@@ -4,7 +4,7 @@ def call(Map config = [:]) {
     def imageTag  = config.imageTag ?: "latest"
     def severity  = config.severity ?: "CRITICAL,HIGH"
     def failBuild = config.failBuild ?: true
-    def trivyUrl  = config.trivyUrl ?: "http://127.0.0.1:4954"
+    def trivyUrl  = config.trivyUrl ?: "http://host.docker.internal::4954"
 
     echo "🔍 Trivy Image Scan "
     echo "Image    : ${imageName}:${imageTag}"
