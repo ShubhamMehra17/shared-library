@@ -17,10 +17,5 @@ def call(Map config = [:]) {
           ${context}
     """
 
-    if (push) {
-        echo "📤 Pushing Docker image ${imageName}:${imageTag}"
-        sh "docker push ${imageName}:${imageTag}"
-    }
-
     echo "✅ Docker build completed"
 }
